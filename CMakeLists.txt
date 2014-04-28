@@ -4,6 +4,15 @@ PROJECT(json_spirit)
 SUBDIRS(json_spirit json_demo json_headers_only_demo json_map_demo json_test)
 INCLUDE_DIRECTORIES(json_spirit)
 
+SET(LIBRARY_OUTPUT_PATH     ${CMAKE_SOURCE_DIR}/lib)
+SET(EXECUTABLE_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/bin)
+
+if(WIN32)
+SET(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/lib/$(Platform))
+add_definitions(/MP)
+add_definitions(/bigobj)
+endif()
+
 INSTALL(
   FILES
   ${CMAKE_SOURCE_DIR}/json_spirit/json_spirit.h

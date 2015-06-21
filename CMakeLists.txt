@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 2.8)
 INCLUDE(${CMAKE_SOURCE_DIR}/../csi-build-scripts/CMakeDependencies.txt)
 
 PROJECT(json_spirit)
-SUBDIRS(json_spirit json_demo json_headers_only_demo json_map_demo json_test)
+SUBDIRS(json_spirit)
+#SUBDIRS(json_spirit json_demo json_headers_only_demo json_map_demo json_test)
 INCLUDE_DIRECTORIES(json_spirit)
 
 INSTALL(

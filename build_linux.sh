@@ -6,5 +6,6 @@ mkdir linux
 cd linux
 cmake -DCMAKE_BUILD_TYPE=Release -D__LINUX__=1 ..
 make -j4
+sudo make install
 cd ..
 

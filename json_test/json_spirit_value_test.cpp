@@ -376,7 +376,7 @@ namespace
         {
             vector< double > vd = list_of( 1.2 )( 1.3 );  test_container_constructor( vd );
             vector< int >    vi = list_of( 1 );           test_container_constructor( vi );
-                             vi = list_of( 1 )( 2 );      test_container_constructor( vi );
+            vi = vector< int >(list_of(1)(2));      test_container_constructor(vi);
                              vi = list_of( 1 )( 2 )( 3 ); test_container_constructor( vi );
             list< double >   ld = list_of( 1.2 )( 1.3 );  test_container_constructor( ld );
             list< int >      li = list_of( 1 );           test_container_constructor( li );

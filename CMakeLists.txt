@@ -1,5 +1,10 @@
-cmake_minimum_required(VERSION 2.8)
-INCLUDE(${CMAKE_SOURCE_DIR}/../build-scripts/CMakeDependencies.txt)
+cmake_minimum_required(VERSION 2.8.1)
+cmake_policy(SET CMP0015 NEW)
+
+include_directories(${Boost_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR})
+
+MESSAGE( STATUS "Boost_INCLUDE_DIRS:         " ${Boost_INCLUDE_DIRS} )
+MESSAGE( STATUS "Boost_LIBRARY_DIRS:         " ${Boost_LIBRARY_DIRS} )
 
 PROJECT(json_spirit)
 SUBDIRS(json_spirit)

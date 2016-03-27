@@ -1,11 +1,8 @@
 cmake_minimum_required(VERSION 2.8.1)
 cmake_policy(SET CMP0015 NEW)
 
-include_directories(${Boost_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR})
-
-MESSAGE( STATUS "Boost_INCLUDE_DIRS:         " ${Boost_INCLUDE_DIRS} )
+include_directories(${CSI_INCLUDE_PATH} ${Boost_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR})
 MESSAGE( STATUS "Boost_LIBRARY_DIRS:         " ${Boost_LIBRARY_DIRS} )
-
 PROJECT(json_spirit)
 SUBDIRS(json_spirit)
 #SUBDIRS(json_spirit json_demo json_headers_only_demo json_map_demo json_test)
